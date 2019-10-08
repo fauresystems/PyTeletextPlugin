@@ -1,55 +1,27 @@
-[08/10/2019 18:36:03.274] INFO - GUI started
-[08/10/2019 18:36:03.769] INFO - Session started
-[08/10/2019 18:36:03.772] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
-[08/10/2019 18:36:04.786] DEBUG - Paho log level 16 : Sending CONNECT (u0, p0, wr0, wq0, wf0, c1, k15) client_id=b'Demoniak/TeletextPlugin/{108ef875-6ce8-4d9a-895f-92cbe2c85dd5}'
-[08/10/2019 18:36:04.787] DEBUG - Paho log level 16 : Received CONNACK (0, 0)
-[08/10/2019 18:36:04.788] INFO - Program connected to MQTT server
-[08/10/2019 18:36:04.788] DEBUG - Paho log level 16 : Sending SUBSCRIBE (d0, m1) [(b'Room/Demoniak/Props/Raspberry Teletext/display', 1)]
-[08/10/2019 18:36:04.788] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
-[08/10/2019 18:36:04.788] DEBUG - Paho log level 16 : Sending SUBSCRIBE (d0, m2) [(b'Room/Demoniak/Control/game:scenario', 1)]
-[08/10/2019 18:36:04.789] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
-[08/10/2019 18:36:04.789] DEBUG - Paho log level 16 : Sending SUBSCRIBE (d0, m3) [(b'Room/Demoniak/Props/Raspberry Teletext/outbox', 1)]
-[08/10/2019 18:36:04.789] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
-[08/10/2019 18:36:04.790] DEBUG - Paho log level 16 : Received SUBACK
-[08/10/2019 18:36:04.791] DEBUG - MQTT topic is subscribed : mid=1 granted_qos=(1,)
-[08/10/2019 18:36:04.792] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
-[08/10/2019 18:36:04.792] DEBUG - Paho log level 16 : Received PUBLISH (d0, q1, r1, m1), 'Room/Demoniak/Props/Raspberry Teletext/display', ...  (24 bytes)
-[08/10/2019 18:36:04.793] DEBUG - Paho log level 16 : Sending PUBACK (Mid: 1)
-[08/10/2019 18:36:04.793] INFO - Display message received from Teletext props : 'dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/display
-[08/10/2019 18:36:04.794] DEBUG - Paho log level 16 : Received SUBACK
-[08/10/2019 18:36:04.795] DEBUG - MQTT topic is subscribed : mid=2 granted_qos=(1,)
-[08/10/2019 18:36:04.795] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
-[08/10/2019 18:36:04.795] DEBUG - Paho log level 16 : Received SUBACK
-[08/10/2019 18:36:04.796] DEBUG - MQTT topic is subscribed : mid=3 granted_qos=(1,)
-[08/10/2019 18:36:04.796] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
-[08/10/2019 18:36:04.796] DEBUG - Paho log level 16 : Received PUBLISH (d0, q1, r1, m2), 'Room/Demoniak/Props/Raspberry Teletext/outbox', ...  (27 bytes)
-[08/10/2019 18:36:04.796] DEBUG - Paho log level 16 : Sending PUBACK (Mid: 2)
-[08/10/2019 18:36:04.797] INFO - Message reçu de la props Teletext : 'CONNECTED FROM 192.168.1.42' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[08/10/2019 18:36:19.803] DEBUG - Paho log level 16 : Sending PINGREQ
-[08/10/2019 18:36:19.804] DEBUG - Paho log level 16 : Received PINGRESP
-[08/10/2019 18:36:21.032] DEBUG - Paho log level 16 : Received PUBLISH (d0, q1, r0, m3), 'Room/Demoniak/Props/Raspberry Teletext/outbox', ...  (4 bytes)
-[08/10/2019 18:36:21.032] DEBUG - Paho log level 16 : Sending PUBACK (Mid: 3)
-[08/10/2019 18:36:21.033] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[08/10/2019 18:36:21.220] INFO - Configuration : indices en anglais
-[08/10/2019 18:36:24.245] DEBUG - Paho log level 16 : Sending PUBLISH (d0, q1, r0, m4), 'b'Room/Demoniak/Props/Raspberry Teletext/inbox'', ... (25 bytes)
-[08/10/2019 18:36:24.246] INFO - Program sending message 'afficher:in second drawer' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
-[08/10/2019 18:36:24.248] DEBUG - Paho log level 16 : Received PUBACK (Mid: 4)
-[08/10/2019 18:36:24.248] DEBUG - MQTT message is published : mid=4 userdata={'host': '192.168.1.42', 'port': 1883}
-[08/10/2019 18:36:24.249] INFO - Message published (mid=4)
-[08/10/2019 18:36:24.371] DEBUG - Paho log level 16 : Received PUBLISH (d0, q1, r0, m4), 'Room/Demoniak/Props/Raspberry Teletext/display', ...  (16 bytes)
-[08/10/2019 18:36:24.372] DEBUG - Paho log level 16 : Sending PUBACK (Mid: 4)
-[08/10/2019 18:36:24.373] INFO - Display message received from Teletext props : 'in second drawer' dans Room/Demoniak/Props/Raspberry Teletext/display
-[08/10/2019 18:36:24.374] DEBUG - Paho log level 16 : Received PUBLISH (d0, q1, r0, m5), 'Room/Demoniak/Props/Raspberry Teletext/outbox', ...  (30 bytes)
-[08/10/2019 18:36:24.375] DEBUG - Paho log level 16 : Sending PUBACK (Mid: 5)
-[08/10/2019 18:36:24.375] INFO - Message reçu de la props Teletext : 'DONE afficher:in second drawer' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[08/10/2019 18:36:30.260] INFO - Configuration : indices en français
-[08/10/2019 18:36:31.879] INFO - Configuration : indices en français
-[08/10/2019 18:36:39.381] DEBUG - Paho log level 16 : Sending PINGREQ
-[08/10/2019 18:36:39.382] DEBUG - Paho log level 16 : Received PINGRESP
-[08/10/2019 18:36:54.389] DEBUG - Paho log level 16 : Sending PINGREQ
-[08/10/2019 18:36:54.390] DEBUG - Paho log level 16 : Received PINGRESP
-[08/10/2019 18:37:02.281] INFO - exitOnClose 
-[08/10/2019 18:37:02.288] DEBUG - Paho log level 16 : Sending DISCONNECT
-[08/10/2019 18:37:02.288] INFO - Program disconnected from MQTT server
-[08/10/2019 18:37:02.288] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
-[08/10/2019 18:37:02.290] INFO - Session done
+[08/10/2019 19:08:59.566] INFO - GUI started
+[08/10/2019 19:08:59.985] INFO - Session started
+[08/10/2019 19:08:59.988] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
+[08/10/2019 19:09:01.001] INFO - Program connected to MQTT server
+[08/10/2019 19:09:01.001] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
+[08/10/2019 19:09:01.003] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
+[08/10/2019 19:09:01.003] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
+[08/10/2019 19:09:01.004] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
+[08/10/2019 19:09:01.005] INFO - Display message received from Teletext props : 'candélabre caché' dans Room/Demoniak/Props/Raspberry Teletext/display
+[08/10/2019 19:09:01.006] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
+[08/10/2019 19:09:01.007] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
+[08/10/2019 19:09:01.008] INFO - Message reçu de la props Teletext : 'CONNECTED FROM 192.168.1.42' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[08/10/2019 19:09:05.798] INFO - Program sending message 'afficher:1515' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
+[08/10/2019 19:09:05.799] INFO - Message published (mid=4)
+[08/10/2019 19:09:05.915] INFO - Display message received from Teletext props : '1515' dans Room/Demoniak/Props/Raspberry Teletext/display
+[08/10/2019 19:09:05.916] INFO - Message reçu de la props Teletext : 'DONE afficher:1515' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[08/10/2019 19:09:09.946] INFO - Program sending message 'afficher:bougies éteintes
+ou pas' (mid=5) on Room/Demoniak/Props/Raspberry Teletext/inbox
+[08/10/2019 19:09:09.948] INFO - Message published (mid=5)
+[08/10/2019 19:09:10.034] INFO - Display message received from Teletext props : 'bougies éteintes
+ou pas' dans Room/Demoniak/Props/Raspberry Teletext/display
+[08/10/2019 19:09:10.036] INFO - Message reçu de la props Teletext : 'DONE afficher:bougies éteintes
+ou pas' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[08/10/2019 19:09:17.764] INFO - exitOnClose 
+[08/10/2019 19:09:17.770] INFO - Program disconnected from MQTT server
+[08/10/2019 19:09:17.770] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
+[08/10/2019 19:09:17.771] INFO - Session done
