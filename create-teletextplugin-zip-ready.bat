@@ -1,0 +1,2 @@
+C:\"Program Files"\7-Zip\7z.exe a -tzip teletextplugin-ready-%date:~6,4%%date:~3,2%%date:~0,2%.zip -xr!_SYNCAPP -xr!*.tgz -xr!*.vs -xr!*.pyc -xr!*.log.* -xr!.eric* -xr!_eric* -xr!__* ./
+;move teletextplugin-ready-%date:~6,4%%date:~3,2%%date:~0,2%.zip D:\GitHub\fauresystems\TeletextPlugin\ready\teletextplugin-ready-%date:~6,4%%date:~3,2%%date:~0,2%.zip
