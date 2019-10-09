@@ -46,6 +46,11 @@ To switch MQTT broker, kill the program and start again with new arguments.
 
 You can use *Teletext plugin* as a template  to create your own Room 2.0 plugin.
 
+About `create-teletextplugin-no-venv-tgz.bat`:
+* install <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> on your Windows desktop
+* run `create-teletextplugin-no-venv-tgz.bat` to archive your work without *python venv*
+* run `create-teletextplugin-tgz.bat` to archive your work with *venv*
+
 #### IDE for hacking `TeletextApplet.py`:
 > You can open a PyCharm Professional project to hack the code remotely, thanks to `.idea` folder. Or if you prefer, you can hack the code with <a href="https://eric-ide.python-projects.org/" target="_blank">Eric6 IDE</a>. 
 
