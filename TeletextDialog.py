@@ -178,18 +178,20 @@ class TeletextDialog(AppletDialog):
     # __________________________________________________________________
     @pyqtSlot(str)
     def teletextMessage(self, message):
+        if message.startswith("DATA "):
+            m = re.match(r'.*lampe=(.+)', message, re.DOTALL)
+            if m:
+                text = m.group(1)
+                if text == "-":
+                    text = ""
+                #text = text.replace('\n', '<br>')
+                #self._tvScreen.setText('<div align=letf style="margin-left:50">' + text + '</div>')
+
         if message.startswith("DISCONNECTED"):
-            self._tvScreen.setText('')
             self._led.switchOn('yellow')
         else:
             if self._led.color() != 'green':
                 self._led.switchOn('green')
-
-        if message.startswith("DATA "):
-            m = re.match(r'.*lampe=(.+)', message, re.DOTALL)
-            if m:
-                value = m.group(1)
-                pass
 
     # __________________________________________________________________
     def closeEvent(self, e):
