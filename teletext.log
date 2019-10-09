@@ -1,18 +1,18 @@
-[09/10/2019 10:26:01.743] INFO - GUI started
-[09/10/2019 10:26:02.166] INFO - Session started
-[09/10/2019 10:26:02.169] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
-[09/10/2019 10:26:03.177] INFO - Program connected to MQTT server
-[09/10/2019 10:26:03.178] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
-[09/10/2019 10:26:03.178] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
-[09/10/2019 10:26:03.178] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
-[09/10/2019 10:26:03.179] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
-[09/10/2019 10:26:03.180] INFO - Display message received from Teletext props : 'bougies éteintes
-ou pas' dans Room/Demoniak/Props/Raspberry Teletext/display
-[09/10/2019 10:26:03.180] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
-[09/10/2019 10:26:03.181] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
-[09/10/2019 10:26:03.181] INFO - Message reçu de la props Teletext : 'CONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[09/10/2019 10:26:18.911] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[09/10/2019 10:27:10.948] INFO - exitOnClose 
-[09/10/2019 10:27:10.959] INFO - Program disconnected from MQTT server
-[09/10/2019 10:27:10.959] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
-[09/10/2019 10:27:10.960] INFO - Session done
+[09/10/2019 13:20:41.918] INFO - GUI started
+[09/10/2019 13:20:42.345] INFO - Session started
+[09/10/2019 13:20:42.348] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
+[09/10/2019 13:20:43.362] INFO - Program connected to MQTT server
+[09/10/2019 13:20:43.363] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
+[09/10/2019 13:20:43.363] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
+[09/10/2019 13:20:43.363] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
+[09/10/2019 13:20:43.364] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
+[09/10/2019 13:20:43.365] INFO - Display message received from Teletext props : '-' dans Room/Demoniak/Props/Raspberry Teletext/display
+[09/10/2019 13:20:43.366] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
+[09/10/2019 13:20:43.366] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
+[09/10/2019 13:20:43.367] INFO - Message reçu de la props Teletext : 'CONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[09/10/2019 13:20:45.742] INFO - Program sending message 'afficher:dans le deuxième tiroir' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
+[09/10/2019 13:20:45.743] INFO - Message published (mid=4)
+[09/10/2019 13:20:45.886] INFO - Display message received from Teletext props : 'dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/display
+[09/10/2019 13:20:45.886] INFO - Message reçu de la props Teletext : 'DONE afficher:dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[09/10/2019 13:20:45.887] INFO - Message reçu de la props Teletext : 'DATA lampe=0' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[09/10/2019 13:20:54.897] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
