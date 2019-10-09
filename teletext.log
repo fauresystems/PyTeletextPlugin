@@ -203,3 +203,7 @@ ou pas' dans Room/Demoniak/Props/Raspberry Teletext/outbox
 [09/10/2019 16:13:23.472] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
 [09/10/2019 16:14:23.463] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
 [09/10/2019 16:15:23.473] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[09/10/2019 16:16:16.920] INFO - exitOnClose 
+[09/10/2019 16:16:16.928] INFO - Program disconnected from MQTT server
+[09/10/2019 16:16:16.928] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
+[09/10/2019 16:16:16.930] INFO - Session done
