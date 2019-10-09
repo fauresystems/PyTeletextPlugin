@@ -46,6 +46,9 @@ To switch MQTT broker, kill the program and start again with new arguments.
 
 You can use *Teletext plugin* as a template  to create your own Room 2.0 plugin.
 
+#### IDE for hacking `TeletextApplet.py`:
+> You can open a PyCharm Professional project to hack the code remotely, thanks to `.idea` folder. Or if you prefer, you can hack the code with <a href="https://eric-ide.python-projects.org/" target="_blank">Eric6 IDE</a>. 
+
 
 ## MqttApplet base class
 *TeletextApplet* extends *MqttApplet*, the base class for Room Control plugins.
