@@ -89,9 +89,9 @@ class TeletextApplet(MqttApplet):
 
         if message:
             self._logger.info(self.tr("Message (language) received : '") + message + self.tr("' in ") + msg.topic)
-            if message == "Anglais":
+            if message == "anglais":
                 self.languageReceived.emit("en")
-            elif message in ["Français", "Enfants"]:
+            elif message in ["français", "enfants"]:
                 self.languageReceived.emit("fr")
             else:
                 self._logger.warning(
