@@ -26,3 +26,7 @@ ou pas' dans Room/Demoniak/Props/Raspberry Teletext/display
 [17/10/2019 09:49:55.287] INFO - Message reçu de la props Teletext : 'DONE afficher:bougies éteintes
 ou pas' dans Room/Demoniak/Props/Raspberry Teletext/outbox
 [17/10/2019 09:50:06.016] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:51:19.025] INFO - exitOnClose 
+[17/10/2019 09:51:19.032] INFO - Program disconnected from MQTT server
+[17/10/2019 09:51:19.033] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
+[17/10/2019 09:51:19.033] INFO - Session done
