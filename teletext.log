@@ -1,33 +1,28 @@
-[15/10/2019 12:32:44.983] INFO - GUI started
-[15/10/2019 12:32:45.402] INFO - Session started
-[15/10/2019 12:32:45.405] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
-[15/10/2019 12:32:46.411] INFO - Program connected to MQTT server
-[15/10/2019 12:32:46.412] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
-[15/10/2019 12:32:46.412] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
-[15/10/2019 12:32:46.412] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:32:46.413] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
-[15/10/2019 12:32:46.413] INFO - Display message received from Teletext props : 'dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/display
-[15/10/2019 12:32:46.414] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
-[15/10/2019 12:32:46.415] INFO - Message (language) reçu : 'français' dans Room/Demoniak/Control/game:scenario
-[15/10/2019 12:32:46.415] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
-[15/10/2019 12:32:46.416] INFO - Message reçu de la props Teletext : 'CONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:32:46.425] INFO - Requête reçue : langue en fr
-[15/10/2019 12:32:50.441] INFO - Message (language) reçu : 'anglais' dans Room/Demoniak/Control/game:scenario
-[15/10/2019 12:32:50.442] INFO - Requête reçue : langue en en
-[15/10/2019 12:32:50.503] INFO - Message reçu de la props Teletext : 'OMIT anglais' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:33:01.319] INFO - Program sending message 'afficher:hidden candelabrum' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
-[15/10/2019 12:33:01.320] INFO - Message published (mid=4)
-[15/10/2019 12:33:01.413] INFO - Display message received from Teletext props : 'hidden candelabrum' dans Room/Demoniak/Props/Raspberry Teletext/display
-[15/10/2019 12:33:01.415] INFO - Message reçu de la props Teletext : 'DONE afficher:hidden candelabrum' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:33:07.273] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:33:09.903] INFO - Message (language) reçu : 'français' dans Room/Demoniak/Control/game:scenario
-[15/10/2019 12:33:09.903] INFO - Requête reçue : langue en fr
-[15/10/2019 12:33:09.967] INFO - Message reçu de la props Teletext : 'OMIT français' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:33:16.390] INFO - Program sending message 'afficher:candélabre caché' (mid=5) on Room/Demoniak/Props/Raspberry Teletext/inbox
-[15/10/2019 12:33:16.391] INFO - Message published (mid=5)
-[15/10/2019 12:33:16.473] INFO - Display message received from Teletext props : 'candélabre caché' dans Room/Demoniak/Props/Raspberry Teletext/display
-[15/10/2019 12:33:16.474] INFO - Message reçu de la props Teletext : 'DONE afficher:candélabre caché' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[15/10/2019 12:33:39.417] INFO - exitOnClose 
-[15/10/2019 12:33:39.424] INFO - Program disconnected from MQTT server
-[15/10/2019 12:33:39.424] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
-[15/10/2019 12:33:39.426] INFO - Session done
+[17/10/2019 09:49:36.332] INFO - GUI started
+[17/10/2019 09:49:36.750] INFO - Session started
+[17/10/2019 09:49:36.754] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
+[17/10/2019 09:49:37.761] INFO - Program connected to MQTT server
+[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
+[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
+[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:49:37.763] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
+[17/10/2019 09:49:37.763] INFO - Display message received from Teletext props : 'dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/display
+[17/10/2019 09:49:37.764] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
+[17/10/2019 09:49:37.764] INFO - Message (language) reçu : 'français' dans Room/Demoniak/Control/game:scenario
+[17/10/2019 09:49:37.765] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
+[17/10/2019 09:49:37.765] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:49:37.776] INFO - Requête reçue : langue en fr
+[17/10/2019 09:49:40.423] INFO - Program sending message 'afficher:dans le deuxième tiroir' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
+[17/10/2019 09:49:40.424] INFO - Message published (mid=4)
+[17/10/2019 09:49:53.039] INFO - Message reçu de la props Teletext : 'CONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:49:53.156] INFO - Message reçu de la props Teletext : 'OMIT français' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:49:53.157] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:49:53.245] INFO - Display message received from Teletext props : '-' dans Room/Demoniak/Props/Raspberry Teletext/display
+[17/10/2019 09:49:55.182] INFO - Program sending message 'afficher:bougies éteintes
+ou pas' (mid=5) on Room/Demoniak/Props/Raspberry Teletext/inbox
+[17/10/2019 09:49:55.182] INFO - Message published (mid=5)
+[17/10/2019 09:49:55.286] INFO - Display message received from Teletext props : 'bougies éteintes
+ou pas' dans Room/Demoniak/Props/Raspberry Teletext/display
+[17/10/2019 09:49:55.287] INFO - Message reçu de la props Teletext : 'DONE afficher:bougies éteintes
+ou pas' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[17/10/2019 09:50:06.016] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
