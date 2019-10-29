@@ -1,32 +1,18 @@
-[17/10/2019 09:49:36.332] INFO - GUI started
-[17/10/2019 09:49:36.750] INFO - Session started
-[17/10/2019 09:49:36.754] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
-[17/10/2019 09:49:37.761] INFO - Program connected to MQTT server
-[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
-[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
-[17/10/2019 09:49:37.762] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:49:37.763] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
-[17/10/2019 09:49:37.763] INFO - Display message received from Teletext props : 'dans le deuxième tiroir' dans Room/Demoniak/Props/Raspberry Teletext/display
-[17/10/2019 09:49:37.764] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
-[17/10/2019 09:49:37.764] INFO - Message (language) reçu : 'français' dans Room/Demoniak/Control/game:scenario
-[17/10/2019 09:49:37.765] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
-[17/10/2019 09:49:37.765] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:49:37.776] INFO - Requête reçue : langue en fr
-[17/10/2019 09:49:40.423] INFO - Program sending message 'afficher:dans le deuxième tiroir' (mid=4) on Room/Demoniak/Props/Raspberry Teletext/inbox
-[17/10/2019 09:49:40.424] INFO - Message published (mid=4)
-[17/10/2019 09:49:53.039] INFO - Message reçu de la props Teletext : 'CONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:49:53.156] INFO - Message reçu de la props Teletext : 'OMIT français' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:49:53.157] INFO - Message reçu de la props Teletext : 'PONG' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:49:53.245] INFO - Display message received from Teletext props : '-' dans Room/Demoniak/Props/Raspberry Teletext/display
-[17/10/2019 09:49:55.182] INFO - Program sending message 'afficher:bougies éteintes
-ou pas' (mid=5) on Room/Demoniak/Props/Raspberry Teletext/inbox
-[17/10/2019 09:49:55.182] INFO - Message published (mid=5)
-[17/10/2019 09:49:55.286] INFO - Display message received from Teletext props : 'bougies éteintes
-ou pas' dans Room/Demoniak/Props/Raspberry Teletext/display
-[17/10/2019 09:49:55.287] INFO - Message reçu de la props Teletext : 'DONE afficher:bougies éteintes
-ou pas' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:50:06.016] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
-[17/10/2019 09:51:19.025] INFO - exitOnClose 
-[17/10/2019 09:51:19.032] INFO - Program disconnected from MQTT server
-[17/10/2019 09:51:19.033] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
-[17/10/2019 09:51:19.033] INFO - Session done
+[29/10/2019 08:02:18.721] INFO - GUI started
+[29/10/2019 08:02:19.780] INFO - Session started
+[29/10/2019 08:02:19.783] INFO - Program initiated asynchronous connection to 192.168.1.42:1883
+[29/10/2019 08:02:20.800] INFO - Program connected to MQTT server
+[29/10/2019 08:02:20.801] INFO - Program subscribing to topic (mid=1) : Room/Demoniak/Props/Raspberry Teletext/display
+[29/10/2019 08:02:20.801] INFO - Program subscribing to topic (mid=2) : Room/Demoniak/Control/game:scenario
+[29/10/2019 08:02:20.802] INFO - Program subscribing to topic (mid=3) : Room/Demoniak/Props/Raspberry Teletext/outbox
+[29/10/2019 08:02:20.803] INFO - Program susbcribed to topic (mid=1) with QoS (1,)
+[29/10/2019 08:02:20.804] INFO - Display message received from Teletext props : '-' dans Room/Demoniak/Props/Raspberry Teletext/display
+[29/10/2019 08:02:20.806] INFO - Program susbcribed to topic (mid=2) with QoS (1,)
+[29/10/2019 08:02:20.806] INFO - Message (language) reçu : 'français' dans Room/Demoniak/Control/game:scenario
+[29/10/2019 08:02:20.806] INFO - Program susbcribed to topic (mid=3) with QoS (1,)
+[29/10/2019 08:02:20.807] INFO - Requête reçue : langue en fr
+[29/10/2019 08:02:20.862] INFO - Message reçu de la props Teletext : 'DISCONNECTED' dans Room/Demoniak/Props/Raspberry Teletext/outbox
+[29/10/2019 08:02:27.176] INFO - exitOnClose 
+[29/10/2019 08:02:27.185] INFO - Program disconnected from MQTT server
+[29/10/2019 08:02:27.186] WARNING - Disconnected from MQTT server with rc=0 from 192.168.1.42:1883
+[29/10/2019 08:02:27.186] INFO - Session done
