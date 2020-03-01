@@ -1,7 +1,7 @@
 ﻿# Teletext plugin for Room
 ***Send MQTT messages to Raspberry connected props running TeletextProps.***
 
-[Teletext Plugin](https://github.com/fauresystems/PyTeletextPlugin) is pure python applet written as **Room** plugin, nevertheless it can be run as standalone Escape Room application.
+***Teletext plugin*** is a pure python applet written as a **Room** plugin, but it still can be run as a standalone Escape Room application.
 
 ![](screenshot.png)
 

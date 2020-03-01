@@ -1,1 +1,0 @@
-C:\"Program Files"\7-Zip\7z.exe a -tzip -mx9 ready\teletextplugin-ready-%date:~6,4%%date:~3,2%%date:~0,2%.zip -xr!.git -xr!ready -xr!_SYNCAPP -xr!*.tgz -xr!*.vs -xr!*.pyc -xr!*.log.* -xr!.eric* -xr!_eric* -xr!__* ./
