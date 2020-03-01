@@ -49,7 +49,7 @@ About `create-teletextplugin-tgz.bat`:
 * run `create-teletextplugin-tgz.bat` to archive archive versions of your work 
 
 #### IDE for hacking `TeletextApplet.py`:
-> You can open a PyCharm Professional project to hack the code remotely, thanks to `.idea` folder. Or if you prefer, you can hack the code with <a href="https://eric-ide.python-projects.org/" target="_blank">Eric6 IDE</a>. 
+> You use <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm Community or Professional</a> to hack the plugin code.
 
 
 ## MqttApplet base class
