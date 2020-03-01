@@ -1,13 +1,15 @@
-﻿# Teletext plugin for Room 2.0
+﻿# Teletext plugin for Room
 ***Send MQTT messages to Raspberry connected props running TeletextProps.***
 
-[Teletext Plugin](https://github.com/fauresystems/PyTeletextPlugin) is pure python applet written as Room 2.0 plugin, nevertheless it can be run as standalone Escape Room application.
+[Teletext Plugin](https://github.com/fauresystems/PyTeletextPlugin) is pure python applet written as **Room** plugin, nevertheless it can be run as standalone Escape Room application.
 
 ![](screenshot.png)
 
+You will find <a href="https://xcape.io/public/documentation/en/room/AddapluginPyTeletextPlugin.html" target="_blank">detailed installation help in the Room manual</a>.
+
 
 ## Installation
-Download `PyTeletextPlugin-master.zip` from this GitHub repository and unflate it in Room/Plugins directory in Room 2.0 software installation folder.
+Download `PyTeletextPlugin-master.zip` from this GitHub repository and unflate it in Room/Plugins directory in **Room** software installation folder.
 
 Edit `definitions.ini` to set MQTT topics for your Escape Room:
 ```python
@@ -44,7 +46,7 @@ To switch MQTT broker, kill the program and start again with new arguments.
 
 *Teletext plugin* expects to monitor a Raspberry connected props running the [Teletext Props](https://github.com/fauresystems/TeletextProps) .
 
-You can use *Teletext plugin* as a template  to create your own Room 2.0 plugin.
+You can use *Teletext plugin* as a template  to create your own **Room** plugin.
 
 About `create-teletextplugin-no-venv-tgz.bat`:
 * install <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> on your Windows desktop
