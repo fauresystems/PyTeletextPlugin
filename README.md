@@ -3,7 +3,7 @@
 
 ***Teletext plugin*** is a pure python applet written as a **Room** plugin, but it still can be run as a standalone Escape Room application.
 
-![](screenshot.png)
+![](shot3.png)
 
 You will find <a href="https://xcape.io/public/documentation/en/room/AddapluginPyTeletextPlugin.html" target="_blank">detailed installation help in the Room manual</a>.
 
@@ -21,24 +21,13 @@ mqtt-sub-room-language = Room/Demoniak/Control/game:scenario
 mqtt-sub-display = Room/My room/Props/Raspberry Teletext/display
 ``` 
 
+Open the plugin on your desktop:
 
-## Usage
-Start `teletext.py` script in `rc.local`:
+Run installer (double-click on install.bat):
 
-```bash
-usage: python3 teletext.py [-h] [-s SERVER] [-p PORT] [-d] [-l LOGGER]
+Run test:
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -s SERVER, --server SERVER
-                        change MQTT server host
-  -p PORT, --port PORT  change MQTT server port
-  -d, --debug           set DEBUG log level
-  -l LOGGER, --logger LOGGER
-                        use logging config file
-```
 
-To switch MQTT broker, kill the program and start again with new arguments.
 
 
 ## TeletextApplet
