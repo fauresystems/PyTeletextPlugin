@@ -8,7 +8,7 @@ Contains all the Room Control applet constants.
 
 # __________________________________________________________________
 # Required by MqttApplet
-APPNAME = "Room 2.0"  # the Room Control application
+APPNAME = "Room"  # the Room Control application
 APPLET = "TeletextPlugin"
 
 MQTT_DEFAULT_HOST = 'localhost'
@@ -19,4 +19,4 @@ TRANSLATOR_FR = "Teletext.fr_FR.qm"  # mandatory, can be ""
 
 # __________________________________________________________________
 # Required by TeletextApplet
-APPDISPLAYNAME = "Room 2.0"  # the Room Control application
+APPDISPLAYNAME = "Room"  # the Room Control application

@@ -3,7 +3,7 @@
 
 ***Teletext plugin*** is a pure python applet written as a **Room** plugin, but it still can be run as a standalone Escape Room application.
 
-![](shot3.png)
+![](shot.png)
 
 You will find <a href="https://xcape.io/public/documentation/en/room/AddapluginPyTeletextPlugin.html" target="_blank">detailed installation help in the Room manual</a>.
 
@@ -21,13 +21,20 @@ mqtt-sub-room-language = Room/Demoniak/Control/game:scenario
 mqtt-sub-display = Room/My room/Props/Raspberry Teletext/display
 ``` 
 
-Open the plugin on your desktop:
+Open the plugin folder on your desktop:
+![](shot1.png)
 
-Run installer (double-click on install.bat):
+Run installer (double-click on `install.bat`):
+![](shot2.png)
 
-Run test:
+If Windows Defender SmartScreen blocks execution, click **More info** and **Run anyway**
 
+Run test (double-click on `test.bat`):
+![](shot3.png)
 
+![](shot4.png)
+
+If the plugin poped-up your installation is correct.
 
 
 ## TeletextApplet
@@ -37,10 +44,9 @@ Run test:
 
 You can use *Teletext plugin* as a template  to create your own **Room** plugin.
 
-About `create-teletextplugin-no-venv-tgz.bat`:
+About `create-teletextplugin-tgz.bat`:
 * install <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> on your Windows desktop
-* run `create-teletextplugin-no-venv-tgz.bat` to archive your work without *python venv*
-* run `create-teletextplugin-tgz.bat` to archive your work with *venv*
+* run `create-teletextplugin-tgz.bat` to archive archive versions of your work 
 
 #### IDE for hacking `TeletextApplet.py`:
 > You can open a PyCharm Professional project to hack the code remotely, thanks to `.idea` folder. Or if you prefer, you can hack the code with <a href="https://eric-ide.python-projects.org/" target="_blank">Eric6 IDE</a>. 
