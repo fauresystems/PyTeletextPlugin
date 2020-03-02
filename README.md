@@ -60,7 +60,7 @@ About `create-teletextplugin-tgz.bat`:
 #### Notes about MQTT QoS:
 >*Python script hangs* have been reported when `paho-mqtt` is running asynchronously with QoS 2 on a network with significant packet loss (particularly Wifi networks).
 
-We have choosen MQTT QoS 1 as default (see *constants.py*).
+We have chosen MQTT QoS 1 as default (see *constants.py*).
 
 MQTT topics are defined in *definitions.ini*.
 
