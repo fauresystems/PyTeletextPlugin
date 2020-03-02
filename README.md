@@ -38,7 +38,7 @@ If the plugin poped-up your installation is correct.
 
 
 ## TeletextApplet
-*Teletext plugin* is a PyQt5 GUI application extending *MqttApplet*.
+*Teletext plugin* is a <a href="https://wiki.python.org/moin/PyQt" target="_blank">PyQt5</a> GUI application extending *MqttApplet*.
 
 *Teletext plugin* expects to monitor a Raspberry connected props running the [Teletext Props](https://github.com/fauresystems/TeletextProps) .
 
@@ -53,9 +53,9 @@ About `create-teletextplugin-tgz.bat`:
 
 
 ## MqttApplet base class
-*TeletextApplet* extends *MqttApplet*, the base class for Room Control plugins.
+*TeletextApplet* extends *MqttApplet*, the base class for **Room** plugins.
  
-*MqttApplet* is a PyQt5 GUI application with paho MQTT.
+*MqttApplet* is a <a href="https://wiki.python.org/moin/PyQt" target="_blank">PyQt5</a> GUI application with <a href="https://www.eclipse.org/paho/" target="_blank">paho MQTT</a>.
 
 #### Notes about MQTT QoS:
 >*Python script hangs* have been reported when `paho-mqtt` is running asynchronously with QoS 2 on a network with significant packet loss (particularly Wifi networks).
