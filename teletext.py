@@ -40,7 +40,7 @@ except BaseException as e:
 	
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-clientid = "Demoniak/TeletextPlugin/" + QUuid.createUuid().toString()
+clientid = "Xcape/TeletextPlugin/" + QUuid.createUuid().toString()
 
 mqtt_client = mqtt.Client(clientid, clean_session=True, userdata=None)
 

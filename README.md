@@ -17,7 +17,7 @@ Edit `definitions.ini` to set MQTT topics for your Escape Room:
 ; mqtt-sub-* topics are subscribed by MqttApplet
 mqtt-pub-teletext = Room/My room/Props/Raspberry Teletext/inbox
 mqtt-sub-teletext = Room/My room/Props/Raspberry Teletext/outbox
-mqtt-sub-room-language = Room/Demoniak/Control/game:scenario
+mqtt-sub-room-language = Room/My room/Control/game:scenario
 mqtt-sub-display = Room/My room/Props/Raspberry Teletext/display
 ``` 
 
