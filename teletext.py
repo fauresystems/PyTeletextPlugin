@@ -46,7 +46,7 @@ mqtt_client = mqtt.Client(clientid, clean_session=True, userdata=None)
 
 applet = TeletextApplet(sys.argv,  mqtt_client,  debugging_mqtt=True)
 
-applet.setApplicationDisplayName("Live Escape")
+applet.setApplicationDisplayName("Room")
 applet.setWindowIcon(QIcon('./teletext-on.svg'));
 
 if applet.logger:
