@@ -4,20 +4,7 @@
 MqttApplet.py
 MIT License (c) Marie Faure <dev at faure dot systems>
 
-Base class for Room Control applet (PyQt5 console application with MQTT).
-
-usage: python3 script.py [-h] [-s SERVER] [-p PORT] [-d] [-l LOGGER]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -s SERVER, --server SERVER
-                        change MQTT server host
-  -p PORT, --port PORT  change MQTT server port
-  -d, --debug           set DEBUG log level
-  -l LOGGER, --logger LOGGER
-                        use logging config file
-
-To switch MQTT broker, kill the program and start again with new arguments.
+Base class for xcape.io Room applet (PyQt5 console application with MQTT).
 """
 
 from constants import *
