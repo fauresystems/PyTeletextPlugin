@@ -102,7 +102,7 @@ class MqttApplet(QApplication):
             else:
                 self._logger = logging.getLogger('production')
                 self._logger.setLevel(logging.INFO)
-            ch = logging.FileHandler(APPLET + '.log', 'w')
+            ch = logging.FileHandler('plugin.log', 'w')
             ch.setLevel(logging.INFO)
             self._logger.addHandler(ch)
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TeletextSettingsDialog.py
+PluginSettingsDialog.py
 MIT License (c) Marie Faure <dev at faure dot systems>
 
 Dialog to configure clue language and kick efects.
@@ -13,14 +13,14 @@ from PyQt5.QtWidgets import (QDialog, QHBoxLayout, QVBoxLayout, QGridLayout,
 from PyQt5.QtGui import QIcon
 
 
-class TeletextSettingsDialog(QDialog):
+class PluginSettingsDialog(QDialog):
     languageChanged = pyqtSignal()
     messageToTeletext = pyqtSignal(str)
 
     # __________________________________________________________________
     def __init__(self, logger):
 
-        super(TeletextSettingsDialog, self).__init__()
+        super(PluginSettingsDialog, self).__init__()
 
         self._logger = logger
 

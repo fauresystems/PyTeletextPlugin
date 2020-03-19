@@ -4,10 +4,10 @@
 ##
 #############################################################################
 
-SOURCES += teletext.py \
-			TeletextApplet.py \
-			TeletextDialog.py \
-			TeletextSettingsDialog.py \
+SOURCES += main.py \
+			PluginApplet.py \
+			PluginDialog.py \
+			PluginSettingsDialog.py \
 			Clue.py \
 			AppletDialog.py \
 			LedWidget.py \
@@ -15,4 +15,4 @@ SOURCES += teletext.py \
 			Singleton.py \
 			constants.py
 
-TRANSLATIONS += Teletext.fr_FR.ts
+TRANSLATIONS += Plugin.fr_FR.ts

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TeletextDialog.py
+PluginDialog.py
 MIT License (c) Marie Faure <dev at faure dot systems>
 
 Dialog to control TeletextProps app running on Raspberry.
@@ -9,7 +9,7 @@ Dialog to control TeletextProps app running on Raspberry.
 
 import os, re
 
-from TeletextSettingsDialog import TeletextSettingsDialog
+from PluginSettingsDialog import PluginSettingsDialog
 from AppletDialog import AppletDialog
 from Clue import Clue
 from LedWidget import LedWidget
@@ -52,7 +52,7 @@ class TvScreenLabel(QLabel):
         return hint
 
 
-class TeletextDialog(AppletDialog):
+class PluginDialog(AppletDialog):
     aboutToClose = pyqtSignal()
     messageToTeletext = pyqtSignal(str)
     switchLed = pyqtSignal(str, str)
@@ -290,7 +290,7 @@ class TeletextDialog(AppletDialog):
     # __________________________________________________________________
     @pyqtSlot()
     def settings(self):
-        dlg = TeletextSettingsDialog(self._logger)
+        dlg = PluginSettingsDialog(self._logger)
         dlg.setModal(True)
         dlg.move(self.pos() + QPoint(20, 20))
         dlg.languageChanged.connect(self.loadLanguage)

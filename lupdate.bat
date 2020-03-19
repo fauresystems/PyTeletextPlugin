@@ -1,1 +1,1 @@
-pylupdate5 Teletext.pro
+pylupdate5 Plugin.pro

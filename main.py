@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-teletext.py
+main.py
 MIT License (c) Marie Faure <dev at faure dot systems>
 
-Applet to control remotely a Raspberry running TeletextProps.
+Applet to control remotely a Raspberry running Teletext Props.
 
-usage: python3 teletext.py [-h] [-s SERVER] [-p PORT] [-d] [-l LOGGER]
+usage: python main.py [-h] [-s SERVER] [-p PORT] [-d] [-l LOGGER]
 
 optional arguments:
   -h, --help            show this help message and exit
+  -f, --french          run in French
   -s SERVER, --server SERVER
                         change MQTT server host
   -p PORT, --port PORT  change MQTT server port
@@ -26,7 +27,7 @@ from PyQt5.QtGui import QIcon
 import paho.mqtt.client as mqtt
 import os,  sys,  platform, signal
 
-from TeletextApplet import TeletextApplet
+from PluginApplet import PluginApplet
 from Singleton import Singleton, SingletonException
 
 
@@ -40,11 +41,11 @@ except BaseException as e:
 	
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-clientid = "Xcape/TeletextPlugin/" + QUuid.createUuid().toString()
+clientid = "Xcape/Plugin/" + QUuid.createUuid().toString()
 
 mqtt_client = mqtt.Client(clientid, clean_session=True, userdata=None)
 
-applet = TeletextApplet(sys.argv,  mqtt_client,  debugging_mqtt=True)
+applet = PluginApplet(sys.argv,  mqtt_client,  debugging_mqtt=True)
 
 applet.setApplicationDisplayName("Room")
 applet.setWindowIcon(QIcon('./teletext-on.svg'));

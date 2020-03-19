@@ -9,14 +9,13 @@ Contains all the Room Control applet constants.
 # __________________________________________________________________
 # Required by MqttApplet
 APPNAME = "Room"  # the Room Control application
-APPLET = "TeletextPlugin"
 
 MQTT_DEFAULT_HOST = 'localhost'
 MQTT_DEFAULT_PORT = 1883
 MQTT_DEFAULT_QoS = 1
 
-TRANSLATOR_FR = "Teletext.fr_FR.qm"  # mandatory, can be ""
+TRANSLATOR_FR = "Plugin.fr_FR.qm"  # mandatory, can be ""
 
 # __________________________________________________________________
-# Required by TeletextApplet
+# Required by PluginApplet
 APPDISPLAYNAME = "Room"  # the Room Control application

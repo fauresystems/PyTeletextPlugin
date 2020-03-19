@@ -3,7 +3,7 @@
 
 ***Teletext plugin*** is a pure python applet written as a **Room** plugin, but it still can be run as a standalone Escape Room application.
 
-![](shot.png)
+![](screenshots/shot.png)
 
 You will find <a href="https://xcape.io/public/documentation/en/room/AddapluginPyTeletextPlugin.html" target="_blank">detailed installation help in the Room manual</a>.
 
@@ -15,29 +15,38 @@ Edit `definitions.ini` to set MQTT topics for your Escape Room:
 ```python
 [mqtt]
 ; mqtt-sub-* topics are subscribed by MqttApplet
-mqtt-pub-teletext = Room/My room/Props/Raspberry Teletext/inbox
-mqtt-sub-teletext = Room/My room/Props/Raspberry Teletext/outbox
-mqtt-sub-room-language = Room/My room/Control/game:scenario
+mqtt-pub-props = Room/My room/Props/Raspberry Teletext/inbox
+mqtt-sub-props = Room/My room/Props/Raspberry Teletext/outbox
+#mqtt-sub-control-administrator = Room/My room/Control/administrator
+mqtt-sub-control-scenario = Room/My room/Control/game:scenario
+#mqtt-sub-control-clock-minutes=Room/My room/Control/game:clock:minutes
+#mqtt-sub-control-countdown-minutes=Room/My room/Control/game:countdown:minutes
+#mqtt-sub-control-players=Room/My room/Control/game:players
+
 mqtt-sub-display = Room/My room/Props/Raspberry Teletext/display
+
+[options]
+tv-screen-width = 320
+tv-screen-height = 180
 ``` 
 
 Open the plugin folder on your desktop:
-![](shot1.png)
+![](screenshots/shot1.png)
 
 Run installer (double-click on `install.bat`):
-![](shot2.png)
+![](screenshots/shot2.png)
 
 If Windows Defender SmartScreen blocks execution, click **More info** and **Run anyway**
 
 Run test (double-click on `test.bat`):
-![](shot3.png)
+![](screenshots/shot3.png)
 
-![](shot4.png)
+![](screenshots/shot4.png)
 
 If the plugin poped-up your installation is correct.
 
 
-## TeletextApplet
+## PluginApplet
 *Teletext plugin* is a <a href="https://wiki.python.org/moin/PyQt" target="_blank">PyQt5</a> GUI application extending *MqttApplet*.
 
 *Teletext plugin* expects to monitor a Raspberry connected props running the [Teletext Props](https://github.com/fauresystems/TeletextProps) .
@@ -48,12 +57,12 @@ About `create-teletextplugin-tgz.bat`:
 * install <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> on your Windows desktop
 * run `create-teletextplugin-tgz.bat` to archive archive versions of your work 
 
-#### IDE for hacking `TeletextApplet.py`:
+#### IDE for hacking `PluginApplet.py`:
 > You use <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm Community or Professional</a> to hack the plugin code.
 
 
 ## MqttApplet base class
-*TeletextApplet* extends *MqttApplet*, the base class for **Room** plugins.
+*PluginApplet* extends *MqttApplet*, the base class for **Room** plugins.
  
 *MqttApplet* is a <a href="https://wiki.python.org/moin/PyQt" target="_blank">PyQt5</a> GUI application with <a href="https://www.eclipse.org/paho/" target="_blank">paho MQTT</a>.
 

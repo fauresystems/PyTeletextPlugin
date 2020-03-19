@@ -21,7 +21,7 @@ if defined _OLD_CODEPAGE (
     set _OLD_CODEPAGE=
 )
 
-python teletext.py
+python main.py
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
