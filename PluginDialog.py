@@ -169,7 +169,7 @@ class PluginDialog(AppletDialog):
 
     # __________________________________________________________________
     @pyqtSlot(str)
-    def teletextDisplayMessage(self, message):
+    def onTeletextDisplayMessage(self, message):
         if message == "-":
             message = ""
         message = message.replace('\n', '<br>')
@@ -177,7 +177,7 @@ class PluginDialog(AppletDialog):
 
     # __________________________________________________________________
     @pyqtSlot(str)
-    def teletextMessage(self, message):
+    def onPropsMessage(self, message):
         if message.startswith("DISCONNECTED"):
             self._tvScreen.setText("")
             self._led.switchOn('yellow')

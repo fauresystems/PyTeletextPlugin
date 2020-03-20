@@ -8,10 +8,11 @@ PluginApplet application extends MqttApplet.
 """
 
 from constants import *
-import argparse
+import argparse, os
+import logging, logging.config
 from MqttApplet import MqttApplet
 from PluginDialog import PluginDialog
-from PyQt5.QtCore import pyqtSignal, pyqtSlot, QTranslator, QDir
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QTranslator, QDir, QSettings
 
 
 class PluginApplet(MqttApplet):
@@ -23,6 +24,10 @@ class PluginApplet(MqttApplet):
     def __init__(self, argv, client, debugging_mqtt=False):
         super().__init__(argv, client, debugging_mqtt)
 
+        settings = QSettings("settings.ini", QSettings.IniFormat);
+        settings.setIniCodec("UTF-8");
+        settings.beginGroup("MQTT")
+
         parser = argparse.ArgumentParser()
         parser.add_argument("-s", "--server", help="change MQTT server host", nargs=1)
         parser.add_argument("-p", "--port", help="change MQTT server port", nargs=1, type=int)
@@ -30,6 +35,41 @@ class PluginApplet(MqttApplet):
         parser.add_argument("-l", "--logger", help="use logging config file", nargs=1)
         parser.add_argument("-f", "--french", help="run in French", action='store_true')
         args = vars(parser.parse_args())
+
+        if args['server']:
+            self._mqttServerHost = args['server'][0]
+            settings.setValue('host', self._mqttServerHost)
+
+        if args['port']:
+            self._mqttServerPort = args['port'][0]
+            settings.setValue('port', self._mqttServerPort)
+
+        if args['logger'] and os.path.isfile(args['logger']):
+            logging.config.fileConfig(args['logger'])
+            if args['debug']:
+                self._logger = logging.getLogger('debug')
+                self._logger.setLevel(logging.DEBUG)
+            else:
+                self._logger = logging.getLogger('production')
+                self._logger.setLevel(logging.INFO)
+        elif os.path.isfile('logging.ini'):
+            logging.config.fileConfig('logging.ini')
+            if args['debug']:
+                self._logger = logging.getLogger('debug')
+                self._logger.setLevel(logging.DEBUG)
+            else:
+                self._logger = logging.getLogger('production')
+                self._logger.setLevel(logging.INFO)
+        else:
+            if args['debug']:
+                self._logger = logging.getLogger('debug')
+                self._logger.setLevel(logging.DEBUG)
+            else:
+                self._logger = logging.getLogger('production')
+                self._logger.setLevel(logging.INFO)
+            ch = logging.FileHandler('plugin.log', 'w')
+            ch.setLevel(logging.INFO)
+            self._logger.addHandler(ch)
 
         self.translator = QTranslator()
         if args['french']:
@@ -68,8 +108,8 @@ class PluginApplet(MqttApplet):
 
         self._PluginDialog = PluginDialog(self.tr("Teletext"), './teletext-on.svg', self._logger)
         self._PluginDialog.aboutToClose.connect(self.exitOnClose)
-        self.teletextDisplayMessageReceived.connect(self._PluginDialog.teletextDisplayMessage)
-        self.propsMessageReceived.connect(self._PluginDialog.teletextMessage)
+        self.teletextDisplayMessageReceived.connect(self._PluginDialog.onTeletextDisplayMessage)
+        self.propsMessageReceived.connect(self._PluginDialog.onPropsMessage)
         self.languageReceived.connect(self._PluginDialog.setLanguage)
         self._PluginDialog.messageToTeletext.connect(self.publishMessageToTeletext)
         self._PluginDialog.show()

@@ -68,43 +68,46 @@ class MqttApplet(QApplication):
         parser.add_argument("-p", "--port", help="change MQTT server port", nargs=1, type=int)
         parser.add_argument("-d", "--debug", help="set DEBUG log level", action='store_true')
         parser.add_argument("-l", "--logger", help="use logging config file", nargs=1)
-        parser.add_argument("-f", "--french", help="run in French", action='store_true')
-        args = vars(parser.parse_args())
 
-        if args['server']:
-            self._mqttServerHost = args['server'][0]
-            settings.setValue('host', self._mqttServerHost)
+        try:
+            args = vars(parser.parse_args())
 
-        if args['port']:
-            self._mqttServerPort = args['port'][0]
-            settings.setValue('port', self._mqttServerPort)
+            if args['server']:
+                self._mqttServerHost = args['server'][0]
+                settings.setValue('host', self._mqttServerHost)
 
-        if args['logger'] and os.path.isfile(args['logger']):
-            logging.config.fileConfig(args['logger'])
-            if args['debug']:
-                self._logger = logging.getLogger('debug')
-                self._logger.setLevel(logging.DEBUG)
+            if args['port']:
+                self._mqttServerPort = args['port'][0]
+                settings.setValue('port', self._mqttServerPort)
+
+            if args['logger'] and os.path.isfile(args['logger']):
+                logging.config.fileConfig(args['logger'])
+                if args['debug']:
+                    self._logger = logging.getLogger('debug')
+                    self._logger.setLevel(logging.DEBUG)
+                else:
+                    self._logger = logging.getLogger('production')
+                    self._logger.setLevel(logging.INFO)
+            elif os.path.isfile('logging.ini'):
+                logging.config.fileConfig('logging.ini')
+                if args['debug']:
+                    self._logger = logging.getLogger('debug')
+                    self._logger.setLevel(logging.DEBUG)
+                else:
+                    self._logger = logging.getLogger('production')
+                    self._logger.setLevel(logging.INFO)
             else:
-                self._logger = logging.getLogger('production')
-                self._logger.setLevel(logging.INFO)
-        elif os.path.isfile('logging.ini'):
-            logging.config.fileConfig('logging.ini')
-            if args['debug']:
-                self._logger = logging.getLogger('debug')
-                self._logger.setLevel(logging.DEBUG)
-            else:
-                self._logger = logging.getLogger('production')
-                self._logger.setLevel(logging.INFO)
-        else:
-            if args['debug']:
-                self._logger = logging.getLogger('debug')
-                self._logger.setLevel(logging.DEBUG)
-            else:
-                self._logger = logging.getLogger('production')
-                self._logger.setLevel(logging.INFO)
-            ch = logging.FileHandler('plugin.log', 'w')
-            ch.setLevel(logging.INFO)
-            self._logger.addHandler(ch)
+                if args['debug']:
+                    self._logger = logging.getLogger('debug')
+                    self._logger.setLevel(logging.DEBUG)
+                else:
+                    self._logger = logging.getLogger('production')
+                    self._logger.setLevel(logging.INFO)
+                ch = logging.FileHandler('plugin.log', 'w')
+                ch.setLevel(logging.INFO)
+                self._logger.addHandler(ch)
+        except:
+            pass
 
     # __________________________________________________________________
     def isConnectedToMqttBroker(self):
@@ -253,6 +256,7 @@ class MqttApplet(QApplication):
             self._logger.error(self.tr("MQTT API : failed to call connect_async()"))
             self._logger.debug(e)
 
+    # __________________________________________________________________
     @property
     def logger(self):
         return self._logger
