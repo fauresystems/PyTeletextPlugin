@@ -8,9 +8,10 @@ PluginApplet application extends MqttApplet.
 """
 
 from constants import *
+import argparse
 from MqttApplet import MqttApplet
 from PluginDialog import PluginDialog
-from PyQt5.QtCore import pyqtSignal, pyqtSlot
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QTranslator, QDir
 
 
 class PluginApplet(MqttApplet):
@@ -21,6 +22,22 @@ class PluginApplet(MqttApplet):
     # __________________________________________________________________
     def __init__(self, argv, client, debugging_mqtt=False):
         super().__init__(argv, client, debugging_mqtt)
+
+        parser = argparse.ArgumentParser()
+        parser.add_argument("-s", "--server", help="change MQTT server host", nargs=1)
+        parser.add_argument("-p", "--port", help="change MQTT server port", nargs=1, type=int)
+        parser.add_argument("-d", "--debug", help="set DEBUG log level", action='store_true')
+        parser.add_argument("-l", "--logger", help="use logging config file", nargs=1)
+        parser.add_argument("-f", "--french", help="run in French", action='store_true')
+        args = vars(parser.parse_args())
+
+        self.translator = QTranslator()
+        if args['french']:
+            try:
+                if self.translator.load(TRANSLATOR_FR, QDir.currentPath()):
+                    self.installTranslator(self.translator)
+            except:
+                pass
 
         self.setApplicationDisplayName(APPDISPLAYNAME)
 

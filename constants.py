@@ -14,7 +14,7 @@ MQTT_DEFAULT_HOST = 'localhost'
 MQTT_DEFAULT_PORT = 1883
 MQTT_DEFAULT_QoS = 1
 
-TRANSLATOR_FR = "Plugin.fr_FR.qm"  # mandatory, can be ""
+TRANSLATOR_FR = "Plugin.fr_FR.qm"
 
 # __________________________________________________________________
 # Required by PluginApplet

@@ -10,7 +10,7 @@ Base class for xcape.io Room applet (PyQt5 console application with MQTT).
 from constants import *
 import logging, logging.config
 import argparse, os
-from PyQt5.QtCore import QSettings, pyqtSignal, pyqtSlot, QTranslator, QDir
+from PyQt5.QtCore import QSettings, pyqtSignal, pyqtSlot
 from PyQt5.QtWidgets import QApplication
 
 MQTT_KEEPALIVE = 15  # 15 seconds is default MQTT_KEEPALIVE in Arduino PubSubClient.h
@@ -105,14 +105,6 @@ class MqttApplet(QApplication):
             ch = logging.FileHandler('plugin.log', 'w')
             ch.setLevel(logging.INFO)
             self._logger.addHandler(ch)
-
-        self.translator = QTranslator()
-        if args['french']:
-            try:
-                if self.translator.load(TRANSLATOR_FR, QDir.currentPath()):
-                    self.installTranslator(self.translator)
-            except:
-                pass
 
     # __________________________________________________________________
     def isConnectedToMqttBroker(self):
