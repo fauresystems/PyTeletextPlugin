@@ -9,7 +9,7 @@ You will find <a href="https://xcape.io/public/documentation/en/room/AddapluginP
 
 
 ## Installation
-Download `PyTeletextPlugin-master.zip` from this GitHub repository and unflate it in Room/Plugins directory in **Room** software installation folder.
+Download `PyTeletextPlugin-master.zip` from this GitHub repository and unflate it in Room/Plugins/PyTeletextPlugin directory in **Room** software installation folder.
 
 Edit `definitions.ini` to set MQTT topics for your Escape Room:
 ```python
