@@ -265,7 +265,7 @@ class PluginDialog(AppletDialog):
     def send(self):
         message = self._editor.toPlainText().strip()
         if len(message):
-            self.messageToTeletext.emit("afficher:" + message)
+            self.messageToTeletext.emit("display:" + message)
         self._selectionComboBox.setCurrentIndex(0)
         self._editor.clear()
 
@@ -300,4 +300,4 @@ class PluginDialog(AppletDialog):
     # __________________________________________________________________
     @pyqtSlot()
     def stop(self):
-        self.messageToTeletext.emit("effacer")
+        self.messageToTeletext.emit("erase")
