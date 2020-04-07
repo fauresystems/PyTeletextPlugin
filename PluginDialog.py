@@ -213,16 +213,16 @@ class PluginDialog(AppletDialog):
                         "{} [{}] : {}".format(self.tr("Clue"), group, self.tr("ignored because 'en' is missing")))
                     continue
                 try:
-                    title = album.value('fr')
+                    title = album.value('en')
                     if '|' in title:
-                        fr = re.compile(r'\s*\|\s*').split(title)
+                        en = re.compile(r'\s*\|\s*').split(title)
                     else:
-                        fr = (title, '')
-                    text = album.value('en')
+                        en = (title, '')
+                    text = album.value('fr')
                     if '|' in text:
-                        en = re.compile(r'\s*\|\s*').split(text)
+                        fr = re.compile(r'\s*\|\s*').split(text)
                     else:
-                        en = (text, '')
+                        fr = (text, '')
                     self._clues[key] = Clue(title, fr, en)
                 except:
                     self._logger.warning("{} {}".format(self.tr("Failed to load clue : "), key))
